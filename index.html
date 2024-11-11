@@ -1,54 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gods Games Studio</title>
 
-        <link rel="stylesheet" href="src\css\style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gods Games Studio</title>
 
-        <!-- Importando o Tailwind CSS a partir de um CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Importando o Tailwind CSS a partir de um CDN -->
+    <link href="./src/css/output.css" rel="stylesheet">
+    <!-- Importando a fonte Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-        <!-- Importando a fonte Poppins-->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header class="w-full m-0 p-0">
-            <nav class="bg-black border-gray-200">
-                <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                        <img src="./src/images/circle_logo_gg_symbol.png" class="h-11" alt="Gods Games Icone">
-                        <img src="./src/images/White_GG_LogoText.png" class="h-7" alt="Gods Games Icone">
-                    </a>
-                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-800" aria-controls="navbar-default" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                            <path stroke="#daa520" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                        </svg>
-                    </button>
-                    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                        <ul class="font-medium flex flex-col p-2 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
-                            <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-yellow-400 md:bg-transparent md:p-0 " aria-current="page">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-yellow-400 md:bg-transparent md:p-0 " aria-current="page">História</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-yellow-400 md:bg-transparent md:p-0 " aria-current="page">Jogos</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-yellow-400 md:bg-transparent md:p-0 " aria-current="page">Noticias</a>
-                            </li>
-                            <li>
-                                <a href="#" class="block py-2 px-3 text-white rounded hover:bg-yellow-400 md:bg-transparentS md:p-0 " aria-current="page">Contato</a>
-                            </li>
-                        </ul>
-                    </div>
+</head>
+
+<body>
+    <header class="w-full m-0 p-0">
+        <nav class="fixed top-0 left-0 w-full bg-black border-gray-200 shadow-lg z-50">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="./src/images/circle_logo_gg_symbol.png" class="h-11" alt="Gods Games Icone">
+                    <!--<img src="./src/images/White_GG_LogoText.png" class="h-7" alt="Gods Games Icone">-->
+                </a>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-800"
+                    aria-controls="navbar-default" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="#daa520" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul
+                        class="font-medium flex flex-col p-2 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-white rounded hover:bg-yellow-500 md:bg-transparent md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 "
+                                aria-current="page">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-white rounded hover:bg-yellow-500 md:bg-transparent md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 "
+                                aria-current="page">História</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-white rounded hover:bg-yellow-500 md:bg-transparent md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 "
+                                aria-current="page">Jogos</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-white rounded hover:bg-yellow-500 md:bg-transparent md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 "
+                                aria-current="page">Noticias</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="block py-2 px-3 text-white rounded hover:bg-yellow-500 md:bg-transparent md:hover:bg-transparent md:hover:text-yellow-500 md:p-0 "
+                                aria-current="page">Contato</a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-        <script src="./src/js/script.js"></script>
-    </body>
+            </div>
+        </nav>
+    </header>
+    <div class="w-full h-16"><!--Lidando com o navbar fixado--></div>
+    <main class="w-full h-full m-0 pt-3">
+        <section id="inicio" class="w-full h-full m-0 p-0">
+            <div class="w-full h-4/5 m-0 p-0">
+                <img src="./src/images/here_we_go_banner.png" class="w-full m-0 p-0" alt="Logo Here We Go">
+            </div>
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto bg-black p-4">
+                <a href="#" class="flex-none w-24">
+                    <img src="./src/images//White_GG_LogoText.png" class="h-8" alt="Gods Games Icone">
+                    <!--<img src="./src/images/White_GG_LogoText.png" class="h-7" alt="Gods Games Icone">-->
+                </a>
+                <h3 class="flex-initial w-64 text-yellow-500 font-black">"Crie memórias, desperte o jogador que existe
+                    em você!"</h3>
+            </div>
+        </section>
+        <div class="w-full h-5 bg-yellow-500"></div>
+        <section id="historia" class="w-full h-full m-0 p-0">
+            <div class="w-full p-4">
+                <h1 class="font-black">História da Empresa</h1>
+                <div class="w-full h-1 mb-2 bg-black rounded"></div>
+                <div class="w-full p-3">
+                    <h3 class="font-semibold text-start">Marco 0 - A Covergência Dos Deuses</h3>
+                    <p class="font-extralight text-justify mt-1.5 ">Em 2024, a Gods Games surgiu da união de três amigos
+                        – Falbet, NaTT e Nogueira – durante uma
+                        intensa competição de desenvolvimento de jogos chamada Game Jam. Assim como os deuses uma vez se
+                        reuniram no Monte Olimpo para forjar novos destinos, três amigos com um sonho em comum, uniram
+                        forças para transformar ideias em experiências inesquecíveis.</p>
+                </div>
+                <div class="w-full p-3">
+                    <h3 class="font-semibold text-end">Marco 1 - A Forja Do Nome Divino</h3>
+                    <p class="font-extralight text-justify mt-1.5">Inspirados pela mitologia grega, decidimos que o nome
+                        da empresa refletiria nossa identidade única. Assim, escolhemos “Gods Games” como uma homenagem
+                        ao nosso grupo de jogos online, onde todos os nicknames começam com o prefixo “God”. Essa
+                        escolha simboliza a conexão com referências divinas e os elementos da mitologia grega, que
+                        permeiam nossa identidade visual, conferindo-lhes uma essência épica.</p>
+                </div>
+                <div class="w-full p-3">
+                    <h3 class="font-semibold text-start">Marco 2 - A Ascensão Dos Novos Deuses</h3>
+                    <p class="font-extralight text-justify mt-1.5">Encerrando um ciclo, a Gods Games se fortaleceu com a
+                        chegada de dois novos fundadores, Dionizio e Anny. Assim como os novos deuses que enriquecem um
+                        panteão, eles trouxeram habilidades valiosas e novas perspectivas. Juntos, formamos uma equipe
+                        determinada e comprometida em criar experiências de jogo dignas dos mais grandiosos mitos.</p>
+                </div>
+            </div>
+            <div class="w-full p-4 m-0 bg-yellow-500 flex">
+                <h1 class="font-black">Missão</h1>
+                <div class="w-full h-1 mt-3 ms-1 bg-black rounded"></div>
+            </div>
+            <div class="w-full bg-yellow-500">
+                <p class="font-black text-white text-center underline decoration-2 uppercase ps-3 pe-4">“Criar
+                    experiências
+                    unicas, divertidas e inesqueciveis para o jogador que habita em você.”</p>
+                <p class="pt-2 pb-3 text-center italic font-semibold leading-relaxed ps-3 pe-4">Assim como Hefesto
+                    moldava o Olimpo com suas criações, a Gods Games está comprometida em criar jogos
+                    únicos e memoráveis, despertando a grandiosidade que vive em cada jogador.</p>
+            </div>
+            <div class="w-full p-4 m-0 bg-white flex">
+                <div class="w-full h-1 mt-3 me-1 bg-black rounded"></div>
+                <h1 class="font-black">Valores</h1>
+            </div>
+            <div class="w-full ps-4 bg-white">
+                <h3 class="font-black text-start text-yellow-500">Criatividade</h3>
+                <p class="pt-2 pb-2 leading-relaxed text-justify pe-4">Assim como Atena, a deusa da
+                    sabedoria e das artes, valorizamos o poder da criatividade para inovar e desafiar o comum, trazendo
+                    novas ideias e perspectivas.</p>
+                <h3 class="font-black text-start text-yellow-500">Paixão</h3>
+                <p class="pt-2 pb-2 leading-relaxed text-justify pe-4">Inspirados pela energia vibrante de
+                    Dionísio, deus do êxtase e da celebração, buscamos criar jogos que envolvam, inspirem e tragam
+                    diversão a cada momento.</p>
+                <h3 class="font-black text-start text-yellow-500">Compromisso</h3>
+                <p class="pt-2 pb-2 leading-relaxed text-justify pe-4">Como Prometeu, que trouxe o fogo à
+                    humanidade, nos comprometemos com o progresso e a dedicação inabalável, entregando jogos e
+                    proporcionando experiências memoraveis.</p>
+                <h3 class="font-black text-start text-yellow-500">Inclusão</h3>
+                <p class="pt-2 pb-2 leading-relaxed text-justify pe-4">Hermes, o mensageiro que conecta deuses
+                    e mortais, nos inspira a valorizar cada jogador.</p>
+            </div>
+        </section>
+        <div class="w-full h-5 bg-yellow-500"></div>
+        <section id="equipe" class="w-full p-0 m-0">
+            <div class="w-full p-4 flex bg-black">
+                <div class="w-2/5 h-1 mt-3 me-2 bg-white rounded"></div>
+                <h1 class="font-black text-center text-white">Equipe</h1>
+                <div class="w-2/5 h-1 mt-3 ms-2 bg-white rounded"></div>
+            </div>
+        </section>
+    </main>
+    <script src="./src/js/script.js"></script>
+</body>
+
 </html>
