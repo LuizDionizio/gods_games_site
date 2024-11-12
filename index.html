@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gods Games Studio</title>
-
+    <style>
+        .fade-edges {
+            mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+        }
+    </style>
     <!-- Importando o Tailwind CSS a partir de um CDN -->
     <link href="./src/css/output.css" rel="stylesheet">
     <!-- Importando a fonte Poppins-->
@@ -80,7 +85,7 @@
                     em você!"</h3>
             </div>
         </section>
-        <div class="w-full h-5 bg-yellow-500"></div>
+        <div class="w-full h-4 bg-yellow-500"></div>
         <section id="historia" class="w-full h-full m-0 p-0">
             <div class="w-full p-4">
                 <h1 class="font-black">História da Empresa</h1>
@@ -143,7 +148,7 @@
                     e mortais, nos inspira a valorizar cada jogador.</p>
             </div>
         </section>
-        <div class="w-full h-5 bg-yellow-500"></div>
+        <div class="w-full h-4 bg-yellow-500"></div>
         <section id="equipe" class="w-full p-0 m-0">
             <div class="w-full p-4 flex bg-black">
                 <div class="w-2/5 h-1 mt-3 me-2 bg-white rounded"></div>
@@ -155,36 +160,35 @@
                 <h1 class="font-black text-center text-yellow-500 mt-3 uppercase">Dionizio</h1>
             </div>
         </section>
-        <div class="w-full h-5 bg-yellow-500"></div>
+        <div class="w-full h-4 bg-yellow-500"></div>
         <section id="jogos" class="w-full p-0 m-0">
             <div class="w-full p-4">
                 <h1 class="font-black">Jogos</h1>
                 <div class="w-full h-1 mb-2 bg-black rounded"></div>
             </div>
+            <div class="w-full h-2 bg-yellow-500"></div>
             <div id="controls-carousel" class="relative w-full" data-carousel="static">
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                <div class="relative h-56 overflow-hidden md:h-96 bg-black">
                     <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out p-3" data-carousel-item>
-                        <img src="./src/images/here_we_go_banner.png" class="absolute block w-9/12 rounded-lg -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        <img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 fade-edges" alt="...">
+                        <h3 class="text-center font-black text-yellow-500">Here We Go!</h3>
                     </div>
                     <!-- Item 2 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                        <img src="/docs/images/carousel/carousel-2.svg" class="absolute block w-9/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item="active">-->
+                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"" alt="...">-->
+                    <!--</div>-->
                     <!-- Item 3 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-9/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>-->
+                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">-->
+                    <!--</div>-->
                     <!-- Item 4 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-9/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
-                    <!-- Item 5 -->
-                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-9/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                    </div>
+                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>-->
+                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">-->
+                    <!--</div>-->      
                 </div>
+                <div class="w-full h-2 bg-yellow-500"></div>
                 <!-- Slider controls -->
                 <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
                     <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/30 dark:bg-gray-800/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-yellow-500 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
