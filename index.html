@@ -156,7 +156,9 @@
                 <div class="w-2/5 h-1 mt-3 ms-2 bg-white rounded"></div>
             </div>
             <div class="w-full p-4 bg-black">
-                <img onclick="loadModal()" class="w-1/2 mx-auto rounded-lg border-4 border-white shadow-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0" src="./src/images/dionizio_avatar.png" alt="Avartar do Dionizio">
+                <img onclick="loadModal()"
+                    class="w-1/2 mx-auto rounded-lg border-4 border-white shadow-lg transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"
+                    src="./src/images/dionizio_avatar.png" alt="Avartar do Dionizio">
                 <h1 class="font-black text-center text-yellow-500 mt-3 uppercase">Dionizio</h1>
             </div>
         </section>
@@ -169,45 +171,131 @@
             <div class="w-full h-2 bg-yellow-500"></div>
             <div id="controls-carousel" class="relative w-full" data-carousel="static">
                 <!-- Carousel wrapper -->
-                <div class="relative h-56 overflow-hidden md:h-96 bg-black">
+                <div class="h-64 overflow-hidden md:h-96 bg-black flex items-center justify-center">
                     <!-- Item 1 -->
-                    <div class="hidden duration-700 ease-in-out p-3" data-carousel-item>
-                        <img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 fade-edges" alt="...">
-                        <h3 class="text-center font-black text-yellow-500">Here We Go!</h3>
+                    <div class="duration-700 ease-in-out p-3 text-center flex flex-col items-center space-y-4"
+                        data-carousel-item>
+                        <!-- Título acima da imagem -->
+                        <h3 class="font-black text-yellow-500 text-lg md:text-2xl mt-2 mb-2">Here We Go!</h3>
+
+                        <!-- Imagem -->
+                        <img src="./src/images/here_we_go_banner.png" class="w-8/12 rounded-full mt-4 fade-edges"
+                            alt="Imagem do jogo">
+
+                        <!-- Legenda abaixo da imagem -->
+                        <p class="text-white text-sm md:text-base mt-3 mb-3">Uma aventura épica com Lionel e seu riquixá
+                            nas agitadas ruas da China - <span class="text-yellow-500">Em desenvolvimento.</span></p>
                     </div>
-                    <!-- Item 2 -->
-                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item="active">-->
-                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0"" alt="...">-->
-                    <!--</div>-->
-                    <!-- Item 3 -->
-                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>-->
-                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">-->
-                    <!--</div>-->
-                    <!-- Item 4 -->
-                    <!--<div class="hidden duration-700 ease-in-out" data-carousel-item>-->
-                        <!--<img src="./src/images/here_we_go_banner.png" class="absolute block w-8/12 rounded-lg  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">-->
-                    <!--</div>-->      
                 </div>
                 <div class="w-full h-2 bg-yellow-500"></div>
                 <!-- Slider controls -->
-                <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/30 dark:bg-gray-800/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-yellow-500 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-yellow-500 dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="#daa520" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                <button type="button"
+                    class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/30 dark:bg-gray-800/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-yellow-500 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-yellow-500 dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="#daa520" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
                         </svg>
                         <span class="sr-only">Previous</span>
                     </span>
                 </button>
-                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/30 dark:bg-gray-800/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-yellow-500 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                        <svg class="w-4 h-4 text-yellow-500 dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                <button type="button"
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-yellow-500/30 dark:bg-gray-800/30 group-hover:bg-yellow-500/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-yellow-500 dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-yellow-500 dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
                         </svg>
                         <span class="sr-only">Next</span>
                     </span>
                 </button>
             </div>
         </section>
+        <section id="noticias" class="w-full p-0 m-0">
+            <div class="max-w-lg mx-auto mt-10 p-3">
+                
+                <h2 class="text-2xl font-bold text-black mb-1">Notícias</h2>
+                <div class="w-full h-1 mb-3 bg-black rounded"></div>
+
+                <!-- Carrossel Container -->
+                <div class="text-center w-full p-4">
+                    <h3 class="text-xl font-bold mb-3 mt-2">Destaques</h3>
+                    <p class="text-gray-700 mb-3">
+                        Últimas Notícias: Mostre os lançamentos recentes, atualizações e eventos importantes, como uma
+                        nova fase de desenvolvimento de um jogo ou novos personagens inspirados na mitologia grega.
+                    </p>
+
+                    <!-- Divisores e Texto Central -->
+                    <div class="w-full flex">
+                        <div class="w-3/5 h-1 mt-2 me-4 bg-black rounded"></div>
+                        <h1 class="font-black text-center text-black">//</h1>
+                        <div class="w-3/5 h-1 mt-4 ms-4 bg-black rounded"></div>
+                    </div>
+
+                    <p class="text-gray-700 mt-3">
+                        Destaques ou Notícias em Foco: Inclua seções para notícias particularmente marcantes, como
+                        colaborações, prêmios, ou participações em eventos de jogos e feiras, exibindo essas notícias em
+                        uma área mais destacada.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div class="w-full h-4 bg-yellow-500"></div>
+        <section id="contato" class="w-full p-0 m-0">
+            <div class="max-w-2xl mx-auto mt-10 p-4">
+                <h2 class="text-2xl font-bold text-black mb-1">Contato</h2>
+                <div class="w-full h-1 mb-3 bg-black rounded"></div>
+            
+                <div class="flex">
+                    <!-- Ícones de Redes Sociais -->
+                    <div class="flex flex-col items-center bg-yellow-500 p-4 rounded-lg shadow-lg space-y-4 h-2/5 me-3 border-2 border-black">
+                        <!-- Ícone do WhatsApp -->
+                        <a href="#" class="p-2 bg-green-500 rounded-full shadow-lg mb-3">
+                            <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" class="w-7">
+                        </a>
+                        <!-- Ícone do Instagram -->
+                        <a href="#" class="p-2 bg-pink-500 rounded-full shadow-lg mb-3">
+                            <img src="https://img.icons8.com/fluency/48/instagram-new.png" alt="Instagram" class="w-7">
+                        </a>
+                        <!-- Ícone do YouTube -->
+                        <a href="#" class="p-2 bg-red-500 rounded-full shadow-lg ">
+                            <img src="https://img.icons8.com/fluency/48/youtube-play.png" alt="YouTube" class="w-7">
+                        </a>
+                    </div>
+            
+                    <!-- Formulário de Contato -->
+                    <form class="flex flex-col space-y-4 ml-8 w-full">
+                        <!-- Campo Nome -->
+                        <label class="text-gray-700 font-semibold" for="name">Nome:</label>
+                        <input type="text" id="name" name="name" class="w-full p-2 bg-gray-200 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            
+                        <!-- Campo Email -->
+                        <label class="text-gray-700 font-semibold" for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 bg-gray-200 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            
+                        <!-- Campo Mensagem -->
+                        <label class="text-gray-700 font-semibold" for="message">Deixe sua mensagem:</label>
+                        <textarea id="message" name="message" rows="4" class="w-full p-2 bg-gray-200 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+            
+                        <!-- Botão Enviar -->
+                        <button type="submit" class="mt-4 px-6 py-2 bg-yellow-400 text-black font-semibold rounded-md shadow-md hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-black border-2 border-black">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full p-0 m-0">
+            <div class="w-full bg-black p-4 text-center">
+                <p class="text-white text-sm">© 2024 Gods Games. Todos os direitos reservados.</p>
+            </div>
+        </footer>
     </main>
     <script src="./src/js/script.js"></script>
 </body>
