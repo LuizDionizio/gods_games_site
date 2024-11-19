@@ -23,15 +23,15 @@ function closeModal() {
 }
 
 //NaTT
-async function loadModal_N() {
+async function loadModal2() {
     const response = await fetch("./src/pages/utils/modal.html");
     const modalContent = await response.text();
     document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal-natt").classList.remove("hidden");
+    document.getElementById("modal2").classList.remove("hidden");
 }
 
-function closeModal_N() {
-    document.getElementById("modal-natt").classList.add("hidden");
+function closeModal2() {
+    document.getElementById("modal2").classList.add("hidden");
 }
 
 //Nogueira
