@@ -9,66 +9,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Moldais
+async function loadModal(id) {
+    // Verifica se a modal já existe no DOM para evitar duplicação
+    if (document.getElementById(`modal-${id}`)) {
+        document.getElementById(`modal-${id}`).classList.remove("hidden");
+        return;
+    }
 
-//Falbet
-async function loadModal() {
-    const response = await fetch("./src/pages/utils/modal.html");
+    // Carrega o conteúdo da modal dinamicamente
+    const response = await fetch(`./src/pages/utils/modal/modal-${id}.html`);
     const modalContent = await response.text();
+
+    // Insere a modal no corpo do documento
     document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal").classList.remove("hidden");
+
+    // Remove a classe "hidden" para exibir a modal
+    document.getElementById(`modal-${id}`).classList.remove("hidden");
+
+    // Adiciona um evento para fechar a modal ao clicar fora dela
+    const modalElement = document.getElementById(`modal-${id}`);
+    modalElement.addEventListener("click", (event) => {
+        if (event.target.id === `modal-${id}`) {
+            closeModal(id);
+        }
+    });
 }
 
-function closeModal() {
-    document.getElementById("modal").classList.add("hidden");
+function closeModal(id) {
+    const modalElement = document.getElementById(`modal-${id}`);
+    if (modalElement) {
+        modalElement.classList.add("hidden");
+        modalElement.remove(); // Remove a modal do DOM ao fechar
+    }
 }
 
-//NaTT
-async function loadModal2() {
-    const response = await fetch("./src/pages/utils/modal.html");
-    const modalContent = await response.text();
-    document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal2").classList.remove("hidden");
-}
-
-function closeModal2() {
-    document.getElementById("modal2").classList.add("hidden");
-}
-
-//Nogueira
-async function loadModal_NO() {
-    const response = await fetch("./src/pages/utils/modal.html");
-    const modalContent = await response.text();
-    document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal-nogueira").classList.remove("hidden");
-}
-
-function closeModal_NO() {
-    document.getElementById("modal-nogueira").classList.add("hidden");
-}
-
-//Dionizio
-async function loadModal_D() {
-    const response = await fetch("./src/pages/utils/modal.html");
-    const modalContent = await response.text();
-    document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal-dionizio").classList.remove("hidden");
-}
-
-function closeModal_D() {
-    document.getElementById("modal-dionizio").classList.add("hidden");
-}
-
-//Anny
-async function loadModal_A() {
-    const response = await fetch("./src/pages/utils/modal.html");
-    const modalContent = await response.text();
-    document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal-anny").classList.remove("hidden");
-}
-
-function closeModal_A() {
-    document.getElementById("modal-anny").classList.add("hidden");
-}
 
 // Carrossel
 document.addEventListener('DOMContentLoaded', function() {
