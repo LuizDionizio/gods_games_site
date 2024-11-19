@@ -11,15 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
 // Moldais
 
 //Falbet
-async function loadModal_F() {
+async function loadModal() {
     const response = await fetch("./src/pages/utils/modal.html");
     const modalContent = await response.text();
     document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal-falbet").classList.remove("hidden");
+    document.getElementById("modal").classList.remove("hidden");
 }
 
-function closeModal_F() {
-    document.getElementById("modal-falbet").classList.add("hidden");
+function closeModal() {
+    document.getElementById("modal").classList.add("hidden");
 }
 
 //NaTT
