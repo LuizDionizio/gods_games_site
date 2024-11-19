@@ -8,16 +8,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// main.js
-async function loadModal() {
+// Moldais
+
+//Falbet
+async function loadModal_F() {
     const response = await fetch("./src/pages/utils/modal.html");
     const modalContent = await response.text();
     document.body.insertAdjacentHTML("beforeend", modalContent);
-    document.getElementById("modal").classList.remove("hidden");
+    document.getElementById("modal-falbet").classList.remove("hidden");
 }
 
-function closeModal() {
-    document.getElementById("modal").classList.add("hidden");
+function closeModal_F() {
+    document.getElementById("modal-falbet").classList.add("hidden");
+}
+
+//NaTT
+async function loadModal_N() {
+    const response = await fetch("./src/pages/utils/modal.html");
+    const modalContent = await response.text();
+    document.body.insertAdjacentHTML("beforeend", modalContent);
+    document.getElementById("modal-natt").classList.remove("hidden");
+}
+
+function closeModal_N() {
+    document.getElementById("modal-natt").classList.add("hidden");
+}
+
+//Nogueira
+async function loadModal_NO() {
+    const response = await fetch("./src/pages/utils/modal.html");
+    const modalContent = await response.text();
+    document.body.insertAdjacentHTML("beforeend", modalContent);
+    document.getElementById("modal-nogueira").classList.remove("hidden");
+}
+
+function closeModal_NO() {
+    document.getElementById("modal-nogueira").classList.add("hidden");
+}
+
+//Dionizio
+async function loadModal_D() {
+    const response = await fetch("./src/pages/utils/modal.html");
+    const modalContent = await response.text();
+    document.body.insertAdjacentHTML("beforeend", modalContent);
+    document.getElementById("modal-dionizio").classList.remove("hidden");
+}
+
+function closeModal_D() {
+    document.getElementById("modal-dionizio").classList.add("hidden");
+}
+
+//Anny
+async function loadModal_A() {
+    const response = await fetch("./src/pages/utils/modal.html");
+    const modalContent = await response.text();
+    document.body.insertAdjacentHTML("beforeend", modalContent);
+    document.getElementById("modal-anny").classList.remove("hidden");
+}
+
+function closeModal_A() {
+    document.getElementById("modal-anny").classList.add("hidden");
 }
 
 // Carrossel
