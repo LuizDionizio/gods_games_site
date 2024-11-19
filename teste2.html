@@ -1,47 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gods Games Studio</title>
-    <style>
-        .fade-edges {
-            mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
-            -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
-        }
-    </style>
-    <!-- Importando o Tailwind CSS a partir de um CDN -->
-    <link href="./src/css/output.css" rel="stylesheet">
-    <!-- Importando a fonte Poppins-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Gods Games</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="font-sans bg-gray-50">
 
-<body class="w-full p-0 m-0">
-    <main class="p-8">
+  <!-- Seção Hero (Imagem de fundo com texto) -->
+  <section class="relative w-full h-screen bg-cover bg-center">
+    <div class="absolute inset-0 bg-black opacity-50"><h1>teste</h1></div>
+    <div class="absolute inset-0 flex items-center justify-center z-10 text-center text-white px-6">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Entre em Contato</h1>
+      <p class="mt-4 text-lg md:text-2xl">Estamos prontos para ouvir suas ideias e sugestões!</p>
+    </div>
+  </section>
 
-        <div class="relative w-full h-screen">
-            <img src="src/images/here_we_go_banner.png" class="w-full h-full object-cover" alt="Imagem do Jogo">
-            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-60"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+  <!-- Seção de Contato -->
+  <section class="py-16 md:py-24 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Nos envie uma mensagem</h2>
+      <p class="mt-4 text-lg text-gray-600">Fique à vontade para tirar dúvidas ou sugerir novas ideias para os nossos jogos.</p>
+    </div>
+
+    <!-- Formulário de Contato -->
+    <div class="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+      <form action="#" method="POST" class="space-y-6">
+        <!-- Nome -->
+        <div class="flex flex-col md:flex-row md:space-x-6">
+          <div class="flex-1">
+            <label for="name" class="block text-lg font-medium text-gray-700">Seu Nome</label>
+            <input type="text" id="name" name="name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Digite seu nome">
+          </div>
+          <div class="flex-1">
+            <label for="email" class="block text-lg font-medium text-gray-700">Seu E-mail</label>
+            <input type="email" id="email" name="email" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Digite seu e-mail">
+          </div>
         </div>
-        
-        <div class="w-full p-8"></div>
 
-        <div class="relative w-full h-screen overflow-hidden">
-            <!-- Imagem de fundo -->
-            <img src="src/images/final_banner.png"
-                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-80"
-                alt="Imagem do Jogo">
-
-            <!-- Camada de neblina (gradiente escuro) -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-60"></div>
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+        <!-- Assunto -->
+        <div>
+          <label for="subject" class="block text-lg font-medium text-gray-700">Assunto</label>
+          <input type="text" id="subject" name="subject" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Qual é o assunto?">
         </div>
-    </main>
-    <script src="./src/js/script.js"></script>
+
+        <!-- Mensagem -->
+        <div>
+          <label for="message" class="block text-lg font-medium text-gray-700">Mensagem</label>
+          <textarea id="message" name="message" rows="6" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Escreva sua mensagem..."></textarea>
+        </div>
+
+        <!-- Botão de Enviar -->
+        <div>
+          <button type="submit" class="w-full py-3 px-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
+            Enviar Mensagem
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seção de Contato Rápido (Com redes sociais) -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold">Conecte-se Conosco</h2>
+      <p class="mt-4 text-lg">Siga-nos nas redes sociais e fique por dentro das novidades!</p>
+      <div class="mt-8 flex justify-center space-x-6">
+        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
 </body>
-
 </html>
