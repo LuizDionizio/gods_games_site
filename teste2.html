@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gods Games Studio</title>
+    <style>
+        .fade-edges {
+            mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 30%, black 70%, transparent);
+        }
+    </style>
+    <!-- Importando o Tailwind CSS a partir de um CDN -->
+    <link href="./src/css/output.css" rel="stylesheet">
+    <!-- Importando a fonte Poppins-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="w-full p-0 m-0">
+    <main class="p-8">
+
+        <div class="relative w-full h-screen">
+            <img src="src/images/here_we_go_banner.png" class="w-full h-full object-cover" alt="Imagem do Jogo">
+            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+        </div>
+        
+        <div class="w-full p-8"></div>
+
+        <div class="relative w-full h-screen overflow-hidden">
+            <!-- Imagem de fundo -->
+            <img src="src/images/final_banner.png"
+                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-80"
+                alt="Imagem do Jogo">
+
+            <!-- Camada de neblina (gradiente escuro) -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black opacity-60"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40"></div>
+        </div>
+    </main>
+    <script src="./src/js/script.js"></script>
+</body>
+
+</html>
