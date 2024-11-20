@@ -25,6 +25,7 @@ async function loadModal(id) {
 
     // Remove a classe "hidden" para exibir a modal
     document.getElementById(`modal-${id}`).classList.remove("hidden");
+    document.getElementById(`modal-${id}`).classList.add("flex");
     document.getElementById('btn-back').classList.add("hidden")
     document.getElementById('btn-next').classList.add("hidden")
 
@@ -41,6 +42,7 @@ function closeModal(id) {
     const modalElement = document.getElementById(`modal-${id}`);
     if (modalElement) {
         modalElement.classList.add("hidden");
+        modalElement.classList.remove('flex')
         modalElement.remove(); // Remove a modal do DOM ao fechar
         document.getElementById('btn-back').classList.remove("hidden")
         document.getElementById('btn-next').classList.remove("hidden")
@@ -73,7 +75,7 @@ let slideIndex = 0;
     }
 
     // Troca automática de slides
-    setInterval(nextSlide, 5000); // Altere 4000 para o intervalo desejado (em milissegundos)
+    setInterval(nextSlide, 10000); // Altere 10000 para o intervalo desejado (em milissegundos)
 
     // Inicializar o primeiro slide
     showSlide(slideIndex);
