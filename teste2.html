@@ -1,78 +1,81 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - Gods Games</title>
+  <title>Equipe - Gods Games</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Adicionando animações suaves para o slideshow */
+    .slideshow-item {
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-50">
 
-  <!-- Seção Hero (Imagem de fundo com texto) -->
-  <section class="relative w-full h-screen bg-cover bg-center">
-    <div class="absolute inset-0 bg-black opacity-50"><h1>teste</h1></div>
-    <div class="absolute inset-0 flex items-center justify-center z-10 text-center text-white px-6">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight">Entre em Contato</h1>
-      <p class="mt-4 text-lg md:text-2xl">Estamos prontos para ouvir suas ideias e sugestões!</p>
-    </div>
-  </section>
-
-  <!-- Seção de Contato -->
-  <section class="py-16 md:py-24 bg-gray-100">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-gray-800">Nos envie uma mensagem</h2>
-      <p class="mt-4 text-lg text-gray-600">Fique à vontade para tirar dúvidas ou sugerir novas ideias para os nossos jogos.</p>
-    </div>
-
-    <!-- Formulário de Contato -->
-    <div class="max-w-4xl mx-auto mt-12 bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
-      <form action="#" method="POST" class="space-y-6">
-        <!-- Nome -->
-        <div class="flex flex-col md:flex-row md:space-x-6">
-          <div class="flex-1">
-            <label for="name" class="block text-lg font-medium text-gray-700">Seu Nome</label>
-            <input type="text" id="name" name="name" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Digite seu nome">
-          </div>
-          <div class="flex-1">
-            <label for="email" class="block text-lg font-medium text-gray-700">Seu E-mail</label>
-            <input type="email" id="email" name="email" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Digite seu e-mail">
-          </div>
+<body class="bg-black text-white font-sans">
+  <div class="flex items-center justify-center h-screen">
+    <!-- Container do Slideshow -->
+    <div class="relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg border border-yellow-400">
+      <!-- Slides -->
+      <div class="flex transition-transform duration-700" id="slideshow">
+        <!-- Slide 1 -->
+        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
+          <h2 class="text-xl font-bold text-yellow-400">Dionizio</h2>
+          <p class="text-sm text-gray-300 text-center">Responsável pela visão criativa e narrativa dos jogos, Dionizio inspira o time com histórias épicas e emocionantes.</p>
         </div>
-
-        <!-- Assunto -->
-        <div>
-          <label for="subject" class="block text-lg font-medium text-gray-700">Assunto</label>
-          <input type="text" id="subject" name="subject" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Qual é o assunto?">
+        <!-- Slide 2 -->
+        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
+          <h2 class="text-xl font-bold text-yellow-400">Anny</h2>
+          <p class="text-sm text-gray-300 text-center">Especialista em design visual, Anny transforma ideias abstratas em mundos vibrantes e cheios de personalidade.</p>
         </div>
-
-        <!-- Mensagem -->
-        <div>
-          <label for="message" class="block text-lg font-medium text-gray-700">Mensagem</label>
-          <textarea id="message" name="message" rows="6" class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500" placeholder="Escreva sua mensagem..."></textarea>
+        <!-- Slide 3 -->
+        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
+          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
+          <h2 class="text-xl font-bold text-yellow-400">Lionel</h2>
+          <p class="text-sm text-gray-300 text-center">Desenvolvedor e programador principal, Lionel garante que cada ideia ganhe vida em código impecável.</p>
         </div>
-
-        <!-- Botão de Enviar -->
-        <div>
-          <button type="submit" class="w-full py-3 px-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
-            Enviar Mensagem
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Seção de Contato Rápido (Com redes sociais) -->
-  <section class="py-16 bg-gray-900 text-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold">Conecte-se Conosco</h2>
-      <p class="mt-4 text-lg">Siga-nos nas redes sociais e fique por dentro das novidades!</p>
-      <div class="mt-8 flex justify-center space-x-6">
-        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-2xl hover:text-yellow-500"><i class="fab fa-instagram"></i></a>
       </div>
-    </div>
-  </section>
 
+      <!-- Botões de Navegação -->
+      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full p-2" onclick="previousSlide()">
+        ◀
+      </button>
+      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full p-2" onclick="nextSlide()">
+        ▶
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const slideshow = document.getElementById("slideshow");
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".slideshow-item");
+    const totalSlides = slides.length;
+
+    // Função para mover para o próximo slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlideshow();
+    }
+
+    // Função para mover para o slide anterior
+    function previousSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlideshow();
+    }
+
+    // Atualiza a posição do slideshow
+    function updateSlideshow() {
+      slideshow.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Troca automática de slides
+    setInterval(nextSlide, 5000); // Troca a cada 5 segundos
+  </script>
 </body>
+
 </html>

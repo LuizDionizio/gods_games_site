@@ -628,8 +628,20 @@ video {
   left: 0px;
 }
 
+.left-4 {
+  left: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .z-10 {
@@ -730,10 +742,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-12 {
-  margin-top: 3rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -800,6 +808,10 @@ video {
 
 .h-2\/5 {
   height: 40%;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .h-28 {
@@ -894,12 +906,12 @@ video {
   width: 100%;
 }
 
-.max-w-2xl {
-  max-width: 42rem;
+.min-w-full {
+  min-width: 100%;
 }
 
-.max-w-4xl {
-  max-width: 56rem;
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-lg {
@@ -908,6 +920,10 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .flex-1 {
@@ -920,6 +936,11 @@ video {
 
 .flex-none {
   flex: none;
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform {
@@ -1060,6 +1081,11 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
+.border-yellow-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(250 204 21 / var(--tw-border-opacity));
+}
+
 .border-yellow-500 {
   --tw-border-opacity: 1;
   border-color: rgb(234 179 8 / var(--tw-border-opacity));
@@ -1070,19 +1096,9 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.bg-gray-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -1192,14 +1208,6 @@ video {
   --tw-gradient-to: #111827 var(--tw-gradient-to-position);
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1225,6 +1233,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -1242,11 +1254,6 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -1312,19 +1319,9 @@ video {
   line-height: 2rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-base {
@@ -1409,6 +1406,11 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
 .text-gray-50 {
   --tw-text-opacity: 1;
   color: rgb(249 250 251 / var(--tw-text-opacity));
@@ -1419,19 +1421,9 @@ video {
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
@@ -1442,6 +1434,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
 .text-yellow-500 {
@@ -1467,10 +1464,6 @@ video {
 
 .opacity-40 {
   opacity: 0.4;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .opacity-60 {
@@ -1516,6 +1509,16 @@ video {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
 }
 
 .duration-300 {
@@ -1688,11 +1691,6 @@ body {
     padding: 0px;
   }
 
-  .md\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1701,11 +1699,6 @@ body {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
-  }
-
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
   }
 
   .md\:text-base {

@@ -25,6 +25,8 @@ async function loadModal(id) {
 
     // Remove a classe "hidden" para exibir a modal
     document.getElementById(`modal-${id}`).classList.remove("hidden");
+    document.getElementById('btn-back').classList.add("hidden")
+    document.getElementById('btn-next').classList.add("hidden")
 
     // Adiciona um evento para fechar a modal ao clicar fora dela
     const modalElement = document.getElementById(`modal-${id}`);
@@ -40,40 +42,39 @@ function closeModal(id) {
     if (modalElement) {
         modalElement.classList.add("hidden");
         modalElement.remove(); // Remove a modal do DOM ao fechar
+        document.getElementById('btn-back').classList.remove("hidden")
+        document.getElementById('btn-next').classList.remove("hidden")
     }
 }
 
+//Slideshow equipe
+let slideIndex = 0;
 
-// Carrossel
-document.addEventListener('DOMContentLoaded', function() {
-    const prevButton = document.querySelector('[data-carousel-prev]');
-    const nextButton = document.querySelector('[data-carousel-next]');
-    const items = document.querySelectorAll('[data-carousel-item]');
-    let currentIndex = 0;
-
-    // Função para mostrar o item atual e esconder os outros
-    function showItem(index) {
-        items.forEach((item, idx) => {
-            if (idx === index) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
+    // Função para mostrar o slide atual
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+        slides.forEach((slide, index) => {
+            slide.style.display = index === slideIndex ? 'block' : 'none';
         });
     }
 
-    // Ação do botão anterior
-    prevButton.addEventListener('click', function() {
-        currentIndex = (currentIndex - 1 + items.length) % items.length;  // Desce o índice
-        showItem(currentIndex);
-    });
+    // Função para mover para o próximo slide
+    function nextSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }
 
-    // Ação do botão próximo
-    nextButton.addEventListener('click', function() {
-        currentIndex = (currentIndex + 1) % items.length;  // Sobe o índice
-        showItem(currentIndex);
-    });
+    // Função para voltar ao slide anterior
+    function prevSlide() {
+        slideIndex--;
+        showSlide(slideIndex);
+    }
 
-    // Mostrar o primeiro item
-    showItem(currentIndex);
-});
+    // Troca automática de slides
+    setInterval(nextSlide, 5000); // Altere 4000 para o intervalo desejado (em milissegundos)
+
+    // Inicializar o primeiro slide
+    showSlide(slideIndex);
+
