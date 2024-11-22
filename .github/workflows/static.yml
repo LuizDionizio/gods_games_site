@@ -33,9 +33,9 @@ jobs:
       - name: Inject environment variables into frontend
         run: |
           # Substitui as variáveis no arquivo JS ou HTML
-          sed -i 's|process.env.EMAILJS_SERVICE_ID|${{ secrets.SERVICE_ID }}|g' src\js\sendEmail.js
-          sed -i 's|process.env.EMAILJS_TEMPLATE_ID|${{ secrets.TEMPLATE_ID }}|g' src\js\sendEmail.js
-          sed -i 's|process.env.EMAILJS_USER_ID|${{ secrets.USER_ID }}|g' src\js\sendEmail.js
+          sed -i 's|process.env.EMAILJS_SERVICE_ID|${{ secrets.SERVICE_ID }}|g' src/js/sendEmail.js
+          sed -i 's|process.env.EMAILJS_TEMPLATE_ID|${{ secrets.TEMPLATE_ID }}|g' src/js/sendEmail.js
+          sed -i 's|process.env.EMAILJS_USER_ID|${{ secrets.USER_ID }}|g' src/js/sendEmail.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
