@@ -1458,10 +1458,6 @@ video {
   text-underline-offset: 8px;
 }
 
-.underline-offset-1 {
-  text-underline-offset: 1px;
-}
-
 .opacity-30 {
   opacity: 0.3;
 }
