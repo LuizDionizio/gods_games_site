@@ -9,32 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Navbar click configuration
-document.addEventListener("DOMContentLoaded", function () {
-    // Altura da navbar
-    const navbarHeight = document.querySelector("nav").offsetHeight;
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    // Seleciona todos os links da navbar
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        const targetId = this.getAttribute('href').substring(1); // Remove o '#' do ID
+        const targetElement = document.getElementById(targetId);
+        const offset = 50; // Ajuste o valor para o espaço desejado
+        
+        if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault(); // Impede o comportamento padrão de rolagem
-
-            // Obtem o alvo da seção
-            const targetId = this.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                // Calcula a posição correta de rolagem, descontando a altura da navbar
-                const offsetPosition = targetElement.offsetTop - navbarHeight;
-
-                // Rola suavemente para a posição
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-            }
-        });
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth',
+            });
+        }
     });
 });
 
