@@ -368,13 +368,13 @@
                                 <label for="name" class="block text-lg font-medium text-gray-900">Seu Nome</label>
                                 <input type="text" id="name" name="name"
                                     class="mt-2 mb-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    placeholder="Digite seu nome">
+                                    placeholder="Digite seu nome" required>
                             </div>
                             <div class="flex-1">
                                 <label for="email" class="block text-lg font-medium text-gray-900">Seu E-mail</label>
                                 <input type="email" id="email" name="email"
                                     class="mt-2 mb-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                    placeholder="Digite seu e-mail">
+                                    placeholder="Digite seu e-mail" required>
                             </div>
                         </div>
 
@@ -383,7 +383,7 @@
                             <label for="subject" class="block text-lg font-medium text-gray-900">Assunto</label>
                             <input type="text" id="subject" name="subject"
                                 class="mt-2 mb-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                placeholder="Qual é o assunto?">
+                                placeholder="Qual é o assunto?" required>
                         </div>
 
                         <!-- Mensagem -->
@@ -391,12 +391,12 @@
                             <label for="message" class="block text-lg font-medium text-gray-900">Mensagem</label>
                             <textarea id="message" name="message" rows="6"
                                 class="mt-2 w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
-                                placeholder="Escreva sua mensagem..."></textarea>
+                                placeholder="Escreva sua mensagem..." required></textarea>
                         </div>
 
                         <!-- Botão de Enviar -->
                         <div>
-                            <button type="submit"
+                            <button type="submit" 
                                 class="w-full py-3 px-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300">
                                 Enviar Mensagem
                             </button>
@@ -417,10 +417,10 @@
         </section>
 
         <!--alert-->
-        <div id="custom-alert" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
+        <div id="custom-alert" class="p-4 fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
             <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center relative">
                 <!-- Botão de Fechar (X) posicionado no canto superior direito -->
-                <button id="close-alert" class="pr-6 absolute top-2 right-2 text-xl font-semibold text-gray-500 hover:text-gray-700">x</button>
+                <button id="close-alert" class="pr-4 absolute top-2 right-2 text-xl font-semibold text-gray-500 hover:text-gray-700">x</button>
         
                 <!-- Mensagem do Alerta -->
                 <span id="alert-message" class="text-lg font-semibold text-gray-800">Mensagem enviada com sucesso!</span>

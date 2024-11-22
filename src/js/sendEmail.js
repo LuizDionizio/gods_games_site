@@ -33,15 +33,19 @@ function showAlert(message, type) {
 
     // Altera a cor do alerta com base no tipo
     if (type === "success") {
-        alertBox.classList.remove("bg-red-500");
-        alertBox.classList.add("bg-green-500");
+        alertBox.classList.add("bg-opacity-50");
         alertBox.classList.add("flex")
     } else if (type === "error") {
-        alertBox.classList.remove("bg-green-500");
-        alertBox.classList.add("bg-red-500");
+        alertBox.classList.add("bg-opacity-50");
         alertBox.classList.add("flex")
     }
 
+    // Limpa os campos do formulário
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('subject').value = '';
+    document.getElementById('message').value = '';
+    
     // Exibe o alerta
     alertBox.classList.remove("hidden");
 
