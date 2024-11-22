@@ -15,67 +15,16 @@
 </head>
 
 <body class="bg-black text-white font-sans">
-  <div class="flex items-center justify-center h-screen">
-    <!-- Container do Slideshow -->
-    <div class="relative w-full max-w-sm overflow-hidden rounded-lg shadow-lg border border-yellow-400">
-      <!-- Slides -->
-      <div class="flex transition-transform duration-700" id="slideshow">
-        <!-- Slide 1 -->
-        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
-          <h2 class="text-xl font-bold text-yellow-400">Dionizio</h2>
-          <p class="text-sm text-gray-300 text-center">Responsável pela visão criativa e narrativa dos jogos, Dionizio inspira o time com histórias épicas e emocionantes.</p>
-        </div>
-        <!-- Slide 2 -->
-        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
-          <h2 class="text-xl font-bold text-yellow-400">Anny</h2>
-          <p class="text-sm text-gray-300 text-center">Especialista em design visual, Anny transforma ideias abstratas em mundos vibrantes e cheios de personalidade.</p>
-        </div>
-        <!-- Slide 3 -->
-        <div class="slideshow-item min-w-full bg-black p-6 flex flex-col items-center justify-center">
-          <img src="https://via.placeholder.com/150" alt="Foto Membro" class="w-24 h-24 rounded-full mb-4 border-4 border-yellow-400">
-          <h2 class="text-xl font-bold text-yellow-400">Lionel</h2>
-          <p class="text-sm text-gray-300 text-center">Desenvolvedor e programador principal, Lionel garante que cada ideia ganhe vida em código impecável.</p>
-        </div>
-      </div>
+  <!--alert-->
+  <div id="custom-alert" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 ">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center relative">
+        <!-- Botão de Fechar (X) posicionado no canto superior direito -->
+        <button id="close-alert" class="pr-6 absolute top-2 right-2 text-xl font-semibold text-gray-500 hover:text-gray-700">x</button>
 
-      <!-- Botões de Navegação -->
-      <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full p-2" onclick="previousSlide()">
-        ◀
-      </button>
-      <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-full p-2" onclick="nextSlide()">
-        ▶
-      </button>
+        <!-- Mensagem do Alerta -->
+        <span id="alert-message" class="text-lg font-semibold text-gray-800">Mensagem enviada com sucesso!</span>
     </div>
-  </div>
-
-  <script>
-    const slideshow = document.getElementById("slideshow");
-    let currentIndex = 0;
-    const slides = document.querySelectorAll(".slideshow-item");
-    const totalSlides = slides.length;
-
-    // Função para mover para o próximo slide
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlideshow();
-    }
-
-    // Função para mover para o slide anterior
-    function previousSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlideshow();
-    }
-
-    // Atualiza a posição do slideshow
-    function updateSlideshow() {
-      slideshow.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Troca automática de slides
-    setInterval(nextSlide, 5000); // Troca a cada 5 segundos
-  </script>
+</div>
 </body>
 
 </html>

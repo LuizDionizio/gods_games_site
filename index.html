@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
 </head>
 
 <body class="w-full m-0 p-0 font-['Poppins'] bg-slate-100">
@@ -415,6 +415,17 @@
                 </div>
             </div>
         </section>
+
+        <!--alert-->
+        <div id="custom-alert" class="fixed inset-0 items-center justify-center bg-black bg-opacity-50 hidden">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full text-center relative">
+                <!-- Botão de Fechar (X) posicionado no canto superior direito -->
+                <button id="close-alert" class="pr-6 absolute top-2 right-2 text-xl font-semibold text-gray-500 hover:text-gray-700">x</button>
+        
+                <!-- Mensagem do Alerta -->
+                <span id="alert-message" class="text-lg font-semibold text-gray-800">Mensagem enviada com sucesso!</span>
+            </div>
+        </div>
 
         <footer class="w-full p-0 mt-8">
             <div class="w-full bg-black p-4 text-center">
