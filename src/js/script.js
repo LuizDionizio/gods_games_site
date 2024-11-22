@@ -15,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         const targetId = this.getAttribute('href').substring(1); // Remove o '#' do ID
         const targetElement = document.getElementById(targetId);
-        const offset = 50; // Ajuste o valor para o espaço desejado
+        const offset = 76; // Ajuste o valor para o espaço desejado
         
         if (targetElement) {
             const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
