@@ -1,3 +1,9 @@
+window.env = {
+    EMAILJS_SERVICE_ID: "${{ secrets.SERVICE_ID }}",
+    EMAILJS_TEMPLATE_ID: "${{ secrets.TEMPLATE_ID }}",
+    EMAILJS_USER_ID: "${{ secrets.USER_ID }}"
+};
+
 // Usando as variáveis de ambiente no frontend
 const serviceID = process.env.EMAILJS_SERVICE_ID;
 const templateID = process.env.EMAILJS_TEMPLATE_ID;
