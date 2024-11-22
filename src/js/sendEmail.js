@@ -1,4 +1,9 @@
-emailjs.init("oFu7Pf0pZEL99iQgd");
+// Usando as variáveis de ambiente no frontend
+const serviceID = process.env.EMAILJS_SERVICE_ID;
+const templateID = process.env.EMAILJS_TEMPLATE_ID;
+const userID = process.env.EMAILJS_USER_ID;
+
+emailjs.init(userID);
 
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault(); // Previne o envio tradicional do formulário
@@ -9,7 +14,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     var message = document.getElementById("message").value;
 
     // Envio de e-mail usando EmailJS
-    emailjs.send("service_6gcjtjt", "template_6n019ud", {
+    emailjs.send(serviceID, templateID, {
         name: name,
         email: email,
         subject: subject,

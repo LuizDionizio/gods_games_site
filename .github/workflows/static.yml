@@ -38,6 +38,11 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+      - name: Set environment variables for EmailJS
+        run: |
+          echo "EMAILJS_SERVICE_ID=${{ secrets.SERVICE_ID }}" >> $GITHUB_ENV
+          echo "EMAILJS_TEMPLATE_ID=${{ secrets.TEMPLATE_ID }}" >> $GITHUB_ENV
+          echo "EMAILJS_USER_ID=${{ secrets.USER_ID }}" >> $GITHUB_ENV
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
