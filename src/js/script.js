@@ -8,6 +8,36 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Navbar click configuration
+document.addEventListener("DOMContentLoaded", function () {
+    // Altura da navbar
+    const navbarHeight = document.querySelector("nav").offsetHeight;
+
+    // Seleciona todos os links da navbar
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); // Impede o comportamento padrão de rolagem
+
+            // Obtem o alvo da seção
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Calcula a posição correta de rolagem, descontando a altura da navbar
+                const offsetPosition = targetElement.offsetTop - navbarHeight;
+
+                // Rola suavemente para a posição
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
+
 // Moldais
 async function loadModal(id) {
     // Verifica se a modal já existe no DOM para evitar duplicação
