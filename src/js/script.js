@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// navbar configuration
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href').substring(1); // Remove o '#' do ID
         const targetElement = document.getElementById(targetId);
-        const offset = 80; // Ajuste o valor para o espaço desejado
+        const offset = 76; // Altura do navbar fixo
 
         if (targetElement) {
             const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
