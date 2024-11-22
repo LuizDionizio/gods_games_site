@@ -69,62 +69,33 @@ function closeModal(id) {
     }
 }
 
-
-// Inicializando o EmailJS com a sua chave pública
-emailjs.init("oFu7Pf0pZEL99iQgd");
-
-// Enviar o e-mail
-document.getElementById("contact-form").addEventListener("submit", function (event) {
-    event.preventDefault();  // Evita o envio tradicional
-
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var subject = document.getElementById("subject").value;
-    var message = document.getElementById("message").value;
-
-    // Envia o e-mail
-    emailjs.send("service_6gcjtjt", "template_6n019ud", {
-        name: name,
-        email: email,
-        subject: subject,
-        message: message
-    }).then(function (response) {
-        alert("Mensagem enviada com sucesso!");
-        console.log("Sucesso:", response);
-    }).catch(function (error) {
-        alert("Erro ao enviar a mensagem. Tente novamente.");
-        console.log("Erro:", error);
-    });
-});
-
 //Slideshow equipe
 let slideIndex = 0;
 
-// Função para mostrar o slide atual
-function showSlide(n) {
-    const slides = document.querySelectorAll('.carousel-item');
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
-    slides.forEach((slide, index) => {
-        slide.style.display = index === slideIndex ? 'block' : 'none';
-    });
-}
+    // Função para mostrar o slide atual
+    function showSlide(n) {
+        const slides = document.querySelectorAll('.carousel-item');
+        if (n >= slides.length) slideIndex = 0;
+        if (n < 0) slideIndex = slides.length - 1;
+        slides.forEach((slide, index) => {
+            slide.style.display = index === slideIndex ? 'block' : 'none';
+        });
+    }
 
-// Função para mover para o próximo slide
-function nextSlide() {
-    slideIndex++;
+    // Função para mover para o próximo slide
+    function nextSlide() {
+        slideIndex++;
+        showSlide(slideIndex);
+    }
+
+    // Função para voltar ao slide anterior
+    function prevSlide() {
+        slideIndex--;
+        showSlide(slideIndex);
+    }
+
+    // Troca automática de slides
+    setInterval(nextSlide, 10000); // Altere 10000 para o intervalo desejado (em milissegundos)
+
+    // Inicializar o primeiro slide
     showSlide(slideIndex);
-}
-
-// Função para voltar ao slide anterior
-function prevSlide() {
-    slideIndex--;
-    showSlide(slideIndex);
-}
-
-// Troca automática de slides
-setInterval(nextSlide, 10000); // Altere 10000 para o intervalo desejado (em milissegundos)
-
-// Inicializar o primeiro slide
-showSlide(slideIndex);
-
