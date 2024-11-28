@@ -70,7 +70,7 @@ function closeModal(id) {
 }
 
 //Slideshow equipe
-let slideIndex = 0;
+/*let slideIndex = 0;
 
     // Função para mostrar o slide atual
     function showSlide(n) {
@@ -98,4 +98,56 @@ let slideIndex = 0;
     setInterval(nextSlide, 10000); // Altere 10000 para o intervalo desejado (em milissegundos)
 
     // Inicializar o primeiro slide
-    showSlide(slideIndex);
+    showSlide(slideIndex);*/
+
+let slideIndex = 0;
+
+// Função para mostrar os slides atuais
+function showSlides() {
+    const slides = document.querySelectorAll('.carousel-item');
+    const isMediumScreen = window.matchMedia('(min-width: 768px)').matches; // Verifica se é tela média ou maior
+    slides.forEach((slide, index) => {
+        if (isMediumScreen) {
+            // Em telas médias, mostrar dois slides consecutivos
+            if (index === slideIndex || index === (slideIndex + 1) % slides.length) {
+                slide.classList.remove('hidden');
+                slide.classList.add('block');
+            } else {
+                slide.classList.remove('block');
+                slide.classList.add('hidden');
+            }
+        } else {
+            // Em telas menores, mostrar apenas um slide
+            if (index === slideIndex) {
+                slide.classList.remove('hidden');
+                slide.classList.add('block');
+            } else {
+                slide.classList.remove('block');
+                slide.classList.add('hidden');
+            }
+        }
+    });
+}
+
+// Função para ir ao próximo slide
+function nextSlide() {
+    const slides = document.querySelectorAll('.carousel-item');
+    slideIndex = (slideIndex + 1) % slides.length;
+    showSlides();
+}
+
+// Função para voltar ao slide anterior
+function prevSlide() {
+    const slides = document.querySelectorAll('.carousel-item');
+    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+    showSlides();
+}
+
+// Troca automática de slides
+setInterval(nextSlide, 10000); // Intervalo de 10 segundos
+
+// Inicializar os slides
+showSlides();
+
+// Atualizar slides ao redimensionar a janela
+window.addEventListener('resize', showSlides);
