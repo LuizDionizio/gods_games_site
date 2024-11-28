@@ -15,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         const targetId = this.getAttribute('href').substring(1); // Remove o '#' do ID
         const targetElement = document.getElementById(targetId);
-        const offset = 76; // Altura do navbar fixo
+        const offset = 80; // Altura do navbar fixo
 
         if (targetElement) {
             const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;

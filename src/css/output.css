@@ -1776,8 +1776,16 @@ body {
     margin-right: auto;
   }
 
+  .xl\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .xl\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .xl\:mt-4 {
+    margin-top: 1rem;
   }
 
   .xl\:h-16 {
@@ -1806,6 +1814,12 @@ body {
 
   .xl\:rounded-tr-lg {
     border-top-right-radius: 0.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mr-16 {
+    margin-right: 4rem;
   }
 }
 
